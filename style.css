@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #252525;
+  color: #ff0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+.movie_select {
+  margin: 20px;
+}
+.movie_select select {
+  background-color: #ff0;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.seats {
+  background-color: #444451;
+  height: 18px;
+  width: 22px;
+  margin: 3px;
+  clip-path: polygon(
+    8% 0,
+    92% 0,
+    77% 83%,
+    100% 76%,
+    100% 100%,
+    0 100%,
+    0 77%,
+    23% 83%
+  );
+  border-radius: 5px;
+}
+.row {
+  display: flex;
+}
+.seats:nth-of-type(3) {
+  margin-right: 10px;
+}
+.seats:nth-last-of-type(3) {
+  margin-left: 10px;
+}
+.seats:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1.3);
+}
+.seats.selected {
+  background-color: #2ee;
+}
+.seats.occupied {
+  background-color: #f55;
+}
+.legend_list {
+  margin: 2px;
+  display: flex;
+  flex-direction: row;
+}
+.seats_legend {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.seats_legend_el {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  /* display: inline; */
+}
+
+.icon {
+  height: 20px;
+  width: 24px;
+  clip-path: polygon(
+    8% 0,
+    92% 0,
+    77% 83%,
+    100% 76%,
+    100% 100%,
+    0 100%,
+    0 77%,
+    23% 83%
+  );
+  border-radius: 6px;
+  background-color: #444451;
+  margin-right: 5px;
+}
+.icon.selected {
+  background-color: #2ee;
+}
+.icon.occupied {
+  background-color: #f55;
+}
+.container {
+  perspective: 1000px;
+  margin: 0 0 10px 0;
+}
+.screen {
+  background-color: #fff;
+  height: 80px;
+  width: 100%;
+  margin: 10px 0px 15px 0px;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.7);
+  transform: rotateX(-40deg);
+}
+p.text span {
+  color: #2ee;
+  font-size: large;
+  font-weight: 800;
+}
